@@ -29,8 +29,8 @@ class DataValidationPipeline:
         self.config = self.read_yaml_file(config_path)
         self.schema = self.read_json_file(schema_path)
         self.logger = AppLogger()
-        self.good_data_folder = 'artifacts/training_data/Good_Data_Folder'
-        self.bad_data_folder = 'artifacts/training_data/Bad_Data_Folder'
+        self.good_data_folder = self.config['good_data_folder']
+        self.bad_data_folder = self.config['bad_data_folder']
         #self.training_batch_files_dir = self.config['unzip_dir']
         self.training_batch_files_dir = os.path.join(self.config['unzip_dir'], "Training_Batch_Files")
         self.ensure_directory(self.good_data_folder)

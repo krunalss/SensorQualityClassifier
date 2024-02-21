@@ -3,3 +3,5 @@ root_directory: artifacts/data_ingestion
 source_url: https://github.com/krunalss/dataset_it_entep/raw/master/Training_Batch_Files.zip
 local_data_file: artifacts/data_ingestion/data.zip
 unzip_dir: artifacts/data_ingestion
+good_data_folder : artifacts/training_data/Good_Data_Folder
+bad_data_folder : artifacts/training_data/Bad_Data_Folder
