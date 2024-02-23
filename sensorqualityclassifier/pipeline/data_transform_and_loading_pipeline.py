@@ -56,6 +56,8 @@ class DataLoadingPipeline:
         Pushes preprocessed DataFrame to Hopsworks feature store.
         """
         try:
+            self.logger.log_info(f"push_data_to_hopsworks_shape={df.shape}")
+            self.logger.log_info(f"push_data_to_hopsworks_head={df.head()}")
             project = hopsworks.login(api_key_value=self.fs_api_key, project=self.fs_project_name)
             fs = project.get_feature_store() 
 
@@ -95,11 +97,14 @@ class DataLoadingPipeline:
 
             # Convert all column data types except 'good_bad'
             for col in combined_df.columns:
-                if col == 'good_bad':
+                if col== 'wafer_num':
+                    combined_df[col] = combined_df[col].astype(str)
+                elif col == 'good_bad':
                     combined_df[col] = combined_df[col].astype(int)
                 else:
                     combined_df[col] = pd.to_numeric(combined_df[col], errors='coerce').astype('float64')
-
+            self.logger.log_info(combined_df.head())
+            self.logger.log_info(combined_df.shape)
             if self.push_data_to_hopsworks(combined_df):
                 self.logger.log_info("All data successfully pushed to Hopsworks.")
             else:
