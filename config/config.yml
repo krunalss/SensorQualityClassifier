@@ -5,3 +5,4 @@ local_data_file: artifacts/data_ingestion/data.zip
 unzip_dir: artifacts/data_ingestion
 good_data_folder : artifacts/training_data/Good_Data_Folder
 bad_data_folder : artifacts/training_data/Bad_Data_Folder
+saved_model : artifacts/trained_models
