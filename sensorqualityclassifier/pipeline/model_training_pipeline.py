@@ -71,6 +71,12 @@ class ModelTrainingPipeline:
         Trains an XGBoost classifier and evaluates its performance.
         """
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+        self.logger.log_info(f"========X_train=\n{X_train.head()}")
+        self.logger.log_info(f"========X_test=\n{X_test.head()}")
+        self.logger.log_info(f"========y_train=\n{y_train.head()}")
+        self.logger.log_info(f"========y_test=\n{y_test.head()}")
+
+
         clf = xgb.XGBClassifier(objective='binary:logistic', n_estimators=100, learning_rate=0.1, max_depth=3, eval_metric='logloss')
         clf.fit(X_train, y_train)
         y_pred = clf.predict(X_test)
@@ -148,10 +154,12 @@ class ModelTrainingPipeline:
         """
         try:
             df = self.fetch_data_from_feature_store()
-            
-            X = df.drop('good_bad', axis=1)
-            X = df.drop('wafer_num', axis=1)
+            columns_to_drop = ['good_bad', 'wafer_num']
+            X = df.drop(columns=columns_to_drop)
             y = df['good_bad']
+
+            self.logger.log_info(f"========X=\n{X.head()}")
+            self.logger.log_info(f"========y=\n{y.head()}")
             model,metrics= self.train_and_evaluate_model(X, y)
             self.logger.log_info(f"model type={type(model)}=========<>metrics type={type(metrics)}")
             self.save_model(model,metrics,X,y)
