@@ -17,7 +17,7 @@ The inputs of various sensors for different wafers have been provided. In electr
     - **data_transform_and_loading_pipeline.py:** Module for data loading and preprocessing.
     - **model_training_pipeline.py:** Module for training the classification model.
     - **inference_pipeline.py:** Module for running inference on new data.
-  - **utils:** Utility functions used across the project.
+  - **utils:** Utility functions used across the project like logger.
 - **README.md:** Overview and instructions for the project.
 
 ## Tools and Technologies
@@ -85,7 +85,7 @@ The `config/config.yml` file contains various parameters such as file paths, mod
 Contributions are welcome! If you have any suggestions or improvements, please open an issue or create a pull request.
 
 ## License
-### **Open-Source**
+**Open-Source**
 This project is licensed under the MIT License.
 
 ## Acknowledgments
@@ -93,12 +93,18 @@ This project is licensed under the MIT License.
 This project is inspired by the need to classify sensor quality efficiently. Thanks to the contributors of the libraries used in this project.
 
 ## References
-1. Hopsworks <img src="https://uploads-ssl.webflow.com/5f6353590bb01cacbcecfbac/6202a13e7cafec5553703f6b_logo.svg" width="55%" >
-https://docs.hopsworks.ai/machine-learning-api/3.7/generated/model-serving/model_serving_api/
+1. **Krish Naik**
+- https://www.youtube.com/user/krishnaik06 
+- https://github.com/krishnaik06
 
-https://colab.research.google.com/github/logicalclocks/hopsworks-tutorials/blob/master/quickstart.ipynb#scrollTo=DH1vdELNF0Uw
+2. **Pau Labarta Bajo**
+- https://github.com/Paulescu
 
+3. **Hopsworks**  <img src="https://uploads-ssl.webflow.com/5f6353590bb01cacbcecfbac/6202a13e7cafec5553703f6b_logo.svg" width="40%" >
 
+- https://docs.hopsworks.ai/machine-learning-api/3.7/generated/model-serving/model_serving_api/
+
+- https://colab.research.google.com/github/logicalclocks/hopsworks-tutorials/blob/master/quickstart.ipynb#scrollTo=DH1vdELNF0Uw
 
 ## Contact
 For any questions or inquiries, please contact krunalss@outlook.com
