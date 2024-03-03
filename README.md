@@ -42,9 +42,9 @@ In this project, we have utilized several tools and technologies to streamline t
    ```
 
 2. Install the required Python dependencies:
- ```bash 
- pip install -r requirements.txt
- ```
+    ```bash 
+    pip install -r requirements.txt
+    ```
 
 
 ## Usage
@@ -52,19 +52,17 @@ In this project, we have utilized several tools and technologies to streamline t
 ### Data Loading and Preprocessing
 
 Modify the configuration file `config/config.yml` according to your data locations and parameters.
-
 Run the data loading and preprocessing pipeline:
-```python 
-python sensorqualityclassifier/pipeline/data_transform_and_loading_pipeline.py
-```
+    ```python
+        python sensorqualityclassifier/pipeline/data_transform_and_loading_pipeline.py
+    ```
 ### Model Training
 
 Modify the configuration file `config/config.yml` if necessary.
-
 Run the model training pipeline:
-```python
-python sensorqualityclassifier/pipeline/model_training_pipeline.py
-```
+    ```python
+    python sensorqualityclassifier/pipeline/model_training_pipeline.py
+    ```
 ### Inference
 
 Ensure that the trained model is available at the location specified in the configuration.
