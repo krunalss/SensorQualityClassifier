@@ -49,6 +49,16 @@ In this project, we have utilized several tools and technologies to streamline t
 
 ## Usage
 
+### Data Extraction
+
+To begin the process, run the data extraction pipeline to gather and assemble data from various sources:
+*(The data used in this project is provided by a tutorial video of Krish Naik. It is important to note that the data is not taken from actual sources and is used here solely for demonstration purposes)* 
+The `data_extraction_pipeline.py` script is responsible for downloading this dataset from the specified repository for use in the project.)
+
+```bash
+python sensorqualityclassifier/pipeline/data_extraction_pipeline.py
+```
+
 ### Data Loading and Preprocessing
 
 Modify the configuration file `config/config.yml` according to your data locations and parameters.
