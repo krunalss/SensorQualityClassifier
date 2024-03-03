@@ -53,16 +53,17 @@ In this project, we have utilized several tools and technologies to streamline t
 
 Modify the configuration file `config/config.yml` according to your data locations and parameters.
 Run the data loading and preprocessing pipeline:
-    ```python
-        python sensorqualityclassifier/pipeline/data_transform_and_loading_pipeline.py
-    ```
+```python
+python sensorqualityclassifier/pipeline/data_transform_and_loading_pipeline.py
+```
 ### Model Training
 
 Modify the configuration file `config/config.yml` if necessary.
 Run the model training pipeline:
-    ```python
-    python sensorqualityclassifier/pipeline/model_training_pipeline.py
-    ```
+```python
+python sensorqualityclassifier/pipeline/model_training_pipeline.py
+```
+
 ### Inference
 
 Ensure that the trained model is available at the location specified in the configuration.
@@ -70,6 +71,7 @@ Ensure that the trained model is available at the location specified in the conf
 Modify the configuration file `config/config.yml` if necessary.
 
 Run the inference pipeline:
+
 ```python
 python sensorqualityclassifier/pipeline/inference_pipeline.py
 ```
