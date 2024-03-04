@@ -35,4 +35,4 @@ EXPOSE $PORT
 # Run the application
 #CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
 # Command to run Streamlit
-CMD ["streamlit", "run", "--server.port", "$PORT", "app.py"]
+CMD ["streamlit", "run", "app.py"]
