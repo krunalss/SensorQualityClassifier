@@ -137,12 +137,13 @@ class InferencePipeline:
 
             self.logger.log_info(f"Count of 1:{count_of_1}")
             self.logger.log_info(f"Count of -1:{count_of_minus_1}")
-                
+            
                 
 
-                # Delete the input CSV file
-                #os.remove(self.config["prediction_dir"])
-                
+            #Delete the input CSV file
+            #os.remove(self.config["prediction_dir"])
+
+            return count_of_1,count_of_minus_1
                     
         except Exception as e:
             self.logger.log_exception("Pipeline execution failed: {}".format(e))
@@ -153,6 +154,7 @@ class InferencePipeline:
             
 if __name__ == "__main__":
     inference_runner = InferencePipeline()
-    inference_runner.run_inference()
+    good,bad=inference_runner.run_inference()
+    print(f"goood={good}, bad={bad}")
 
     

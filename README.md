@@ -11,9 +11,10 @@ The inputs of various sensors for different wafers have been provided. In electr
 ## Project Structure
 
 - **config:** Contains configuration files.
-- **data:** Directory to store data files.
-- **sensorqualityclassifier:**
+- **saved_artifacts:** Directory to store model artifacts files.
+- **sensorqualityclassifier:(src)**
   - **pipeline:**
+    - **data_extraction_pipeline.py:** Module for downloading the traing data from the datasource mentioned in config.yml
     - **data_transform_and_loading_pipeline.py:** Module for data loading and preprocessing.
     - **model_training_pipeline.py:** Module for training the classification model.
     - **inference_pipeline.py:** Module for running inference on new data.

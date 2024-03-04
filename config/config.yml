@@ -7,5 +7,5 @@ good_data_folder : artifacts/training_data/Good_Data_Folder
 bad_data_folder : artifacts/training_data/Bad_Data_Folder
 saved_model : artifacts/trained_models
 load_model  : artifacts\trained_models\xgboost_model.pkl
-prediction_dir : artifacts/prediction_dir
+prediction_dir : saved_artifacts\prediction_dir
 output_dir : artifacts/output
