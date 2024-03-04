@@ -30,7 +30,9 @@ RUN poetry config virtualenvs.create false \
 # Copy the project code into the container
 COPY . /app/
 
-EXPOSE $PORT
+EXPOSE 8501
 
 # Run the application
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
+#CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
+# Command to run Streamlit
+CMD ["streamlit", "run", "--server.port", "8501", "app.py"]
