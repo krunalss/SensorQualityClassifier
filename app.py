@@ -40,7 +40,7 @@ def home_page():
     st.subheader("Project Structure")
     st.markdown(f"<div style='text-align: justify;'>{project_stucture_text}</div>", unsafe_allow_html=True)
 
-    if st.button("Lets Predict the qulity of wafer"):
+    if st.button("Lets Predict the Quality of wafer here"):
             navigate('prediction_project')
 
 def upload_csv():
